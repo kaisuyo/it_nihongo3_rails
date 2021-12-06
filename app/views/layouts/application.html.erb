@@ -12,7 +12,7 @@
       <header>
         <%= link_to "ホーム", root_url %><br />
         <% if user_signed_in? %>
-            こんにちは、<%= current_user.email %><br />
+            こんにちは、<%= link_to current_user.email, users_show_path %><br />
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         <br />
       <% else %>
