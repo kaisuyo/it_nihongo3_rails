@@ -3,6 +3,9 @@
 <p><%= current_user.email %></p>
 <p>Name: <%= current_user.name %></p>
 <p>Age: <%= current_user.age %></p>
+<p>
+  <%= image_tag current_user.avatar if current_user.avatar.attached? %>
+</p>
 
 <%= link_to 'Edit', edit_user_registration_path %> |
 <%= link_to 'Back', root_path %>
